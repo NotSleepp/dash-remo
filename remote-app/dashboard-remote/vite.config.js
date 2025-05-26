@@ -12,6 +12,7 @@ export default defineConfig({
       exposes: {
         './RemoteWidget': './src/components/RemoteWidget.vue',
         './RemoteComponent': './src/components/RemoteComponent.vue',
+        './RemoteExample': './src/components/RemoteExample.vue',
       },
       shared: {
         vue: { 
@@ -34,8 +35,8 @@ export default defineConfig({
     assetsDir: 'assets'
   },
   preview: {
-    port: 5001,
-    strictPort: true,
+    port: 5003,
+    strictPort: false,
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
@@ -43,8 +44,8 @@ export default defineConfig({
     }
   },
   server: {
-    port: 5001,
-    strictPort: true,
+    port: 5003,
+    strictPort: false,
     cors: true,
     headers: {
       "Access-Control-Allow-Origin": "*",

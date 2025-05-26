@@ -1,15 +1,16 @@
 <script setup>
 import { ref } from "vue";
 import RemoteComponent from "./components/RemoteComponent.vue";
+import RemoteExample from "./components/RemoteExample.vue";
 
-const title = ref("Aplicación Remota");
+const title = ref("AplicaciÃ³n Remota");
 </script>
 
 <template>
  <div class="app-container">
   <header>
    <h1>{{ title }}</h1>
-   <p>Este es un componente remoto que se carga desde otra aplicación</p>
+   <p>Este es un componente remoto que se carga desde otra aplicaciÃ³n</p>
   </header>
   <main>
    <div class="info-card">
@@ -17,8 +18,12 @@ const title = ref("Aplicación Remota");
     <RemoteComponent />
    </div>
    <div class="info-card">
-    <h2>Información</h2>
-    <p>Este componente se está cargando desde la aplicación host.</p>
+    <h2>Componente de Ejemplo con Bridge</h2>
+    <RemoteExample />
+   </div>
+   <div class="info-card">
+    <h2>InformaciÃ³n</h2>
+    <p>Este componente se estÃ¡ cargando desde la aplicaciÃ³n host.</p>
    </div>
   </main>
  </div>
